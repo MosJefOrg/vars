@@ -1,0 +1,23 @@
+name: Vars
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+      choice:
+        type: choice
+        description: Make a choice
+        options:
+        - stg
+        - dev
+        
+
+jobs:
+  display-variables:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.ENVIRONMENT }}
+    steps:
+    - name: Use variables
+      run: |
+        echo "Environment Variable `DEPLOY_RUNNER` $DEPLOY_RUNNER"
+      env:
+        DEPOLOY_RUNNER: ${{ vars.DEPLOY_RUNNER }}
