@@ -12,7 +12,7 @@ env:
   RUNNER_VAR: ${{ vars.DEPLOY_RUNNER }} # This variable is available to all jobs      
 jobs:
   display-variables:
-    runs-on: $RUNNER_VAR
+    runs-on: ${{ vars.DEPLOY_RUNNER }}
     environment: ${{ inputs.ENVIRONMENT }}
     steps:
     - name: Use variables
