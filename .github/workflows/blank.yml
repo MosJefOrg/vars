@@ -3,9 +3,8 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-      choice:
         type: choice
-        description: Make a choice
+        description: Choose an env
         options:
         - stg
         - dev
