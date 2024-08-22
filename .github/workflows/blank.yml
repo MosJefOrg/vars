@@ -12,7 +12,7 @@ on:
 
 jobs:
   display-variables:
-    runs-on: ${{ vars.DEPLOY_RUNNER }}
+    runs-on: ubuntu-latest
     environment: ${{ inputs.ENVIRONMENT }}
     steps:
     - name: Use variables
