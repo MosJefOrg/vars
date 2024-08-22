@@ -17,6 +17,6 @@ jobs:
     steps:
     - name: Use variables
       run: |
-        echo "Environment Variable `DEPLOY_RUNNER` $DEPLOY_RUNNER"
+        echo "deployment runner : $DEPLOY_RUNNER"
       env:
-        DEPOLOY_RUNNER: ${{ vars.DEPLOY_RUNNER }}
+        DEPLOY_RUNNER: ${{ vars.DEPLOY_RUNNER }}
