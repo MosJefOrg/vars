@@ -8,11 +8,15 @@ on:
         options:
         - stg
         - dev
+      runner:
+        type: choice
+        options:
+        - ubuntu-latest
 env:
   RUNNER_VAR: ${{ vars.DEPLOY_RUNNER }} # This variable is available to all jobs      
 jobs:
   display-variables:
-    runs-on: ${{ env.RUNNER_VAR }}
+    runs-on: ${{ inputs.RUNNER }}
     environment: ${{ inputs.ENVIRONMENT }}
     steps:
     - name: Use variables
